@@ -1,0 +1,3 @@
+[submodule "vagrant/haskell"]
+	path = vagrant/haskell
+	url = git://github.com/pbrisbin/vagrant-haskell.git
