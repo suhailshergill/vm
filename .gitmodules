@@ -1,3 +1,6 @@
 [submodule "vagrant/haskell"]
 	path = vagrant/haskell
 	url = git://github.com/pbrisbin/vagrant-haskell.git
+[submodule "veewee"]
+	path = veewee
+	url = git://github.com/jedi4ever/veewee.git
