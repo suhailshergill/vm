@@ -1,0 +1,4 @@
+.vagrant
+vagrant/iso
+vagrant/*.box
+*.tar.gz
