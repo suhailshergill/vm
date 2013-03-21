@@ -1,0 +1,9 @@
+* installation instructions
+  #+NAME: vagrant/init
+  #+BEGIN_SRC sh :dir ./
+    #!/bin/bash
+    sudo gem install bundler
+    sudo bundle install
+    echo 'alias vagrant="bundle exec vagrant"' >> ~/.bashrc_local
+  #+END_SRC
+
