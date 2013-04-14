@@ -1,9 +1,25 @@
+#+PROPERTY: dir-dyn no
+#+PROPERTY: dir ~/config/hacking/vm/vagrant/
+#+PROPERTY: result silent
+
 * installation instructions
+  #+NAME: vagrant/install
+  #+BEGIN_SRC sh :dir /home/shergill/config/hacking/vm/vagrant/ :sudo yes 
+    gem install bundler
+    bundle install
+  #+END_SRC
+
   #+NAME: vagrant/init
-  #+BEGIN_SRC sh :dir ./
-    #!/bin/bash
-    sudo gem install bundler
-    sudo bundle install
+  #+BEGIN_SRC sh
     echo 'alias vagrant="bundle exec vagrant"' >> ~/.bashrc_local
   #+END_SRC
+* startup
+  #+NAME: vagrant
+  #+BEGIN_SRC sh :async yes :var action="up"
+    bundle exec vagrant $action
+  #+END_SRC
+
+  #+CALL: vagrant[](action="suspend")
+
+  #+CALL: vagrant[]("up")
 
